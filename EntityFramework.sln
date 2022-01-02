@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giris", "Giris\Giris.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giris2", "Giris2\Giris2.csproj", "{33C966B4-2043-4C39-9BC3-8EB149BFC1AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Convestion_DataAnotations", "Convestion_DataAnotations\Convestion_DataAnotations.csproj", "{F1190766-C2B6-4921-A5B0-E3052C1E3B0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{33C966B4-2043-4C39-9BC3-8EB149BFC1AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33C966B4-2043-4C39-9BC3-8EB149BFC1AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33C966B4-2043-4C39-9BC3-8EB149BFC1AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1190766-C2B6-4921-A5B0-E3052C1E3B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1190766-C2B6-4921-A5B0-E3052C1E3B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1190766-C2B6-4921-A5B0-E3052C1E3B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1190766-C2B6-4921-A5B0-E3052C1E3B0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
