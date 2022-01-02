@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giris", "Giris\Giris.csproj", "{025E3716-47FD-4EAA-AF44-8DDC41AB425D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giris2", "Giris2\Giris2.csproj", "{33C966B4-2043-4C39-9BC3-8EB149BFC1AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{025E3716-47FD-4EAA-AF44-8DDC41AB425D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025E3716-47FD-4EAA-AF44-8DDC41AB425D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{025E3716-47FD-4EAA-AF44-8DDC41AB425D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{025E3716-47FD-4EAA-AF44-8DDC41AB425D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C966B4-2043-4C39-9BC3-8EB149BFC1AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C966B4-2043-4C39-9BC3-8EB149BFC1AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C966B4-2043-4C39-9BC3-8EB149BFC1AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C966B4-2043-4C39-9BC3-8EB149BFC1AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {104C4367-920E-4D96-8CEE-8BF727B1F7C9}
+	EndGlobalSection
+EndGlobal
