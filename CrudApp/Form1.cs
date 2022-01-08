@@ -17,5 +17,11 @@ namespace CrudApp
             InitializeComponent();
         }
 
+        private void btnKategori_Click(object sender, EventArgs e)
+        {
+            frmKategori frm = new frmKategori();
+            frm.Show();
+
+        }
     }
 }
