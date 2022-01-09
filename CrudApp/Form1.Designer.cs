@@ -52,6 +52,7 @@ namespace CrudApp
             this.btnKullanici.TabIndex = 1;
             this.btnKullanici.Text = "Kullanıcı İşlemleri";
             this.btnKullanici.UseVisualStyleBackColor = true;
+            this.btnKullanici.Click += new System.EventHandler(this.btnKullanici_Click);
             // 
             // btnNakliye
             // 

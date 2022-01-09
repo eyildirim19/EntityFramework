@@ -47,6 +47,7 @@ namespace CrudApp
             this.btnKaydet.TabIndex = 0;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // label1
             // 
@@ -89,6 +90,7 @@ namespace CrudApp
             this.dgwKullanici.RowTemplate.Height = 25;
             this.dgwKullanici.Size = new System.Drawing.Size(296, 173);
             this.dgwKullanici.TabIndex = 5;
+            this.dgwKullanici.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwKullanici_CellClick);
             // 
             // cbAktifmi
             // 
@@ -114,6 +116,7 @@ namespace CrudApp
             this.Controls.Add(this.btnKaydet);
             this.Name = "frmKullanici";
             this.Text = "frmKullanici";
+            this.Load += new System.EventHandler(this.frmKullanici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwKullanici)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

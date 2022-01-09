@@ -29,5 +29,11 @@ namespace CrudApp
             frmShippers frm = new frmShippers();
             frm.Show();
         }
+
+        private void btnKullanici_Click(object sender, EventArgs e)
+        {
+            frmKullanici frm = new frmKullanici();
+            frm.Show();
+        }
     }
 }
