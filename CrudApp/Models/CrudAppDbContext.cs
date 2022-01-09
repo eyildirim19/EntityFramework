@@ -32,6 +32,10 @@ namespace CrudApp.Models
             modelBuilder.Entity<Shippers>()
                 .Property(c => c.Name)
                 .HasColumnName("ShipperName");
+
+            modelBuilder.Entity<User>()
+                .Property(c => c.IsLock)
+                .HasDefaultValue(false);
         }
     }
 }

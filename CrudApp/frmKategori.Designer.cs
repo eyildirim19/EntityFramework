@@ -35,6 +35,8 @@ namespace CrudApp
             this.label2 = new System.Windows.Forms.Label();
             this.btnEkle = new System.Windows.Forms.Button();
             this.dgwKategoriler = new System.Windows.Forms.DataGridView();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwKategoriler)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,9 +75,9 @@ namespace CrudApp
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(83, 164);
+            this.btnEkle.Location = new System.Drawing.Point(205, 166);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(92, 26);
+            this.btnEkle.Size = new System.Drawing.Size(55, 26);
             this.btnEkle.TabIndex = 4;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
@@ -86,17 +88,42 @@ namespace CrudApp
             this.dgwKategoriler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwKategoriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwKategoriler.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgwKategoriler.Location = new System.Drawing.Point(0, 222);
+            this.dgwKategoriler.Location = new System.Drawing.Point(0, 195);
             this.dgwKategoriler.Name = "dgwKategoriler";
             this.dgwKategoriler.RowTemplate.Height = 25;
-            this.dgwKategoriler.Size = new System.Drawing.Size(383, 178);
+            this.dgwKategoriler.Size = new System.Drawing.Size(383, 205);
             this.dgwKategoriler.TabIndex = 5;
+            this.dgwKategoriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwKategoriler_CellClick);
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Enabled = false;
+            this.btnGuncelle.Location = new System.Drawing.Point(266, 166);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(62, 26);
+            this.btnGuncelle.TabIndex = 6;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // btnSil
+            // 
+            this.btnSil.Enabled = false;
+            this.btnSil.Location = new System.Drawing.Point(334, 166);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(40, 26);
+            this.btnSil.TabIndex = 7;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // frmKategori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 400);
+            this.Controls.Add(this.btnSil);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.dgwKategoriler);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.label2);
@@ -120,5 +147,7 @@ namespace CrudApp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.DataGridView dgwKategoriler;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnSil;
     }
 }

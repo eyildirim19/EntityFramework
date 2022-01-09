@@ -4,14 +4,16 @@ using CrudApp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CrudApp.Migrations
 {
     [DbContext(typeof(CrudAppDbContext))]
-    partial class CrudAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220109090748_UserAddColumnLocks")]
+    partial class UserAddColumnLocks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

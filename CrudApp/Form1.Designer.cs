@@ -61,6 +61,7 @@ namespace CrudApp
             this.btnNakliye.TabIndex = 2;
             this.btnNakliye.Text = "Nakliye İşlemleri";
             this.btnNakliye.UseVisualStyleBackColor = true;
+            this.btnNakliye.Click += new System.EventHandler(this.btnNakliye_Click);
             // 
             // Form1
             // 

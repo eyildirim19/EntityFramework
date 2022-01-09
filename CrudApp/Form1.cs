@@ -23,5 +23,11 @@ namespace CrudApp
             frm.Show();
 
         }
+
+        private void btnNakliye_Click(object sender, EventArgs e)
+        {
+            frmShippers frm = new frmShippers();
+            frm.Show();
+        }
     }
 }

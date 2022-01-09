@@ -73,5 +73,80 @@ namespace CrudApp
         {
             KategoriDoldur();
         }
+
+        // hücrelere tıklanma eventı
+        private void dgwKategoriler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex; // tıklanan satır indexi
+            int colIndex = e.ColumnIndex; // tıklanan sütun indexi
+
+            if (rowIndex == -1 || colIndex == -1)
+                return;
+
+            ID = (int)dgwKategoriler.Rows[rowIndex].Cells[0].Value; // ID hücresi
+            txtKategoriAdi.Text = (string)dgwKategoriler.Rows[rowIndex].Cells[1].Value;
+            txtAciklama.Text = (string)dgwKategoriler.Rows[rowIndex].Cells[2].Value;
+
+            btnEkle.Enabled = false;
+            btnGuncelle.Enabled = true;
+            btnSil.Enabled = true;
+
+        }
+
+        int ID;
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            Categories kategori = dbContext.Kategori.Find(ID); // ID'ye göre katgoriyi bulduk..
+            kategori.Name = txtKategoriAdi.Text;
+            kategori.Description = txtAciklama.Text;
+
+            try
+            {
+                dbContext.SaveChanges();// değişikliği veritabanına yansıt...
+                MessageBox.Show("İşlem Başarılı");
+                Clear();
+                ID = 0;
+                KategoriDoldur();
+
+                btnEkle.Enabled = true;
+                btnGuncelle.Enabled = false;
+                btnSil.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hay Aksi... Bir hata var..");
+            }
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Gerçekten silmek istiyormusun???", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+            Categories kategori = dbContext.Kategori.Find(ID);
+            dbContext.Kategori.Remove(kategori);
+
+            try
+            {
+                dbContext.SaveChanges();
+                MessageBox.Show("İşlem Başarılı");
+                Clear();
+                ID = 0;
+                KategoriDoldur();
+
+                btnEkle.Enabled = true;
+                btnGuncelle.Enabled = false;
+                btnSil.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata var..");
+            }
+
+        }
     }
 }
