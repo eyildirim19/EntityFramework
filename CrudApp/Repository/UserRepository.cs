@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CrudApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CrudApp.Repository
 {
     // User sınıfın crud işlemlerinden sorumlu sınıf...
-    public class UserRepository : IRepository<User>
+    public class UserRepository : IRepository<User>, ISearchRepository<User>
     {
         CrudAppDbContext dbContext; // field
         public UserRepository()
@@ -42,6 +43,11 @@ namespace CrudApp.Repository
             }
         }
 
+        public User findByUserName(string userName)
+        {
+            return dbContext.Kullanici.FirstOrDefault(c => c.Name == userName);
+        }
+
         public User FindById(int Id)
         {
             return dbContext.Kullanici.Find(Id);
@@ -62,6 +68,12 @@ namespace CrudApp.Repository
             {
                 return 0;
             }
+        }
+
+        public int RemoveBloke()
+        {
+            int result = dbContext.Database.ExecuteSqlRaw("ResetUserBloke"); // sql cümlesin çalıştırır..
+            return result;
         }
     }
 }
